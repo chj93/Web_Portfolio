@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>최혜진의 포트폴리오</title>
+<link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
+<link rel="stylesheet" href="css/master.css" />
+<link rel="stylesheet" href="css/portfolioStyle.css" />
+<script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+<input type="checkbox" id="toggle" />
+
+<div id="wrap">
+
+    <header id="main_header">
+        <label for="toggle" class="toggle"></label>
+        <h2 id="logo"><a href="index.html">최혜진의 포트폴리오</a></h2>
+        <ul id="main_nav">
+            <li><span>01</span><a href="index.html">Main</a></li>
+            
+            <li><span>02</span><a href="about_me.html">About Me</a></li>
+            <li class="hover"><span>03</span><a href="portfolio.html">Portfolio</a></li>
+            <div class="black_bar"></div>
+            <li><span>04</span><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <script>
+
+        $(function(){
+
+            $("#category > button").click(function(){
+			$("#category > button").removeClass("active");
+			$(this).addClass("active"); 
+		    });           
+
+            $(".all").click(function(){
+                $("#contents > li").css({display:"block"});
+            });
+
+            $(".web").click(function(){
+                $("#con1, #con2, #con3, #con4").css({display:"block"});                
+                $("#con5, #con6, #con7, #con8").css({display:"none"});
+            });
+
+            $(".stage").click(function(){
+                $("#con1, #con2, #con3, #con4").css({display:"none"});
+                $("#con5, #con6, #con7, #con8").css({display:"block"});
+
+            });
+
+        });
+
+    </script>
+    <div id="background_apply">
+    </div><!--/#background_apply-->
+        <section id="portfolio">
+            <div id="category">
+                <button class="all active">ALL</button>
+                <button class="web">WEB</button>
+                <button class="stage">STAGE</button>
+            </div>
+
+            <ul id="contents">
+                <li id="con1"><a href="dongwha.html">
+                    <h4>DongWha Pharm</h4>
+                    <p>2018.8</p>
+                </a></li>
+
+                <li id="con2"><a href="gentlemonster.html">
+                    <h4>Gentle Monster</h4>
+                    <p>2018.10</p>
+                </a></li>
+
+                <li id="con3"><a href="kbank.html">
+                    <h4>K bank</h4>
+                    <p>2018.9</p>
+                </a></li>
+
+                <li id="con4"><a href="aritaum.html">
+                    <h4>Aritaum</h4>
+                    <p>2018.7</p>
+                </a></li>
+
+                <li id="con5"><a href="stage1.html">
+                    <h4 class="korean">오뚝이 아저씨 자빠졌다</h4>
+                    <p>2016.</p>
+                </a></li>
+
+                <li id="con6"><a href="stage2.html">
+                    <h4 class="korean">사천의 선인</h4>
+                    <p>2015.</p>
+                </a></li>
+
+                <li id="con7"><a href="stage3.html">
+                    <h4 class="korean">인어전설</h4>
+                    <p>2015.</p>
+                </a></li>
+
+                <li id="con8"><a href="stage4.html">
+                    <h4 class="korean">인생차압:살아있는 이중생 각하</h4>
+                    <p>2013.</p>
+                </a></li>           
+            </ul>
+        </section>
+    
+    <script>
+
+        $(function(){
+            $("#con1 > a").mouseenter(function(){
+			    $("#background_apply").addClass("con1");
+		    });
+
+            $("#con2 > a").mouseenter(function(){
+			    $("#background_apply").addClass("con2");
+		    });
+
+            $("#con3 > a").mouseenter(function(){
+			    $("#background_apply").addClass("con3");
+		    });
+
+            $("#con4 > a").mouseenter(function(){
+			    $("#background_apply").addClass("con4");
+		    });
+
+            $("#con5 > a").mouseenter(function(){
+			    $("#background_apply").addClass("con5");
+		    });
+
+            $("#con6 > a").mouseenter(function(){
+			    $("#background_apply").addClass("con6");
+		    });
+
+            $("#con7 > a").mouseenter(function(){
+			    $("#background_apply").addClass("con7");
+		    });
+
+            $("#con8 > a").mouseenter(function(){
+			    $("#background_apply").addClass("con8");
+		    });
+
+            $("#contents > li > a").mouseenter(function(){
+			    $("#contents > li > a").addClass("point_up");
+		    });
+
+            $("#contents > li > a").mouseleave(function(){
+                $("#background_apply").removeClass();
+                $("#contents > li > a").removeClass("point_up");
+            });
+
+            
+
+        });
+
+    </script>
+
+
+    <footer id="main_footer">
+        <ul>
+            <li id="footer_p">Phone</li>
+            <a href="#">010-6875-6645</a>
+                
+            <li id="footer_e">E-mail</li>
+            <a href="mailto:chj942@gmail.com">chj942@gmail.com</a>
+                
+            <li class="black_bar"></li>
+        </ul>
+    </footer>
+
+    <script>
+
+    $(function(){
+        var index=0;
+        
+        $("#footer_p").click(function(){
+            index++;
+            if(index>1){
+                index=0;	
+            }
+            show();	
+        });
+
+        $("#footer_e").click(function(){
+            index--;
+            if(index>1){
+                index=0;	
+            }
+            show2();	
+        });
+
+        function show(){
+            $("footer > ul > a").removeClass("footer_p");
+            $("footer > ul > a:first-of-type").eq(index).addClass("footer_p");	
+        }
+
+        function show2(){
+            $("footer > ul > a").removeClass("footer_p");
+            $("footer > ul > a:last-of-type").eq(index).addClass("footer_p");	
+        }        
+    });          
+    </script>
+
+</div><!--/#wrap-->
+</body>
+</html>

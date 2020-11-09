@@ -1,0 +1,4 @@
+/* header.css */
+
+@import url(header_pc.css) screen and (min-width: 1367px);
+@import url(header_t_m.css) screen and (max-width: 1367px);

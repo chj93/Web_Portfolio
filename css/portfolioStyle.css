@@ -1,0 +1,211 @@
+/* portfolioStyle.css */
+
+    #background_apply{
+        width: 100%; height: 100%;
+        position: fixed;
+        overflow: auto;
+        background-size: cover;
+        opacity: 0;
+        
+    }
+
+    #background_apply.con1{
+        background-image: url(../img/img1_w2.jpg);
+        opacity: 1;
+        transition-duration: 0.3s;
+    }
+
+    #background_apply.con2{
+        background-image: url(../img/img2_w.jpg);
+        opacity: 1;
+        transition-duration: 0.3s;
+    }
+
+    #background_apply.con3{
+        background-image: url(../img/img3_w.jpg);
+        opacity: 1;
+        transition-duration: 0.3s;
+    }
+
+    #background_apply.con4{
+        background-image: url(../img/img4_w.jpg);
+        opacity: 1;
+        transition-duration: 0.3s;
+    }
+
+    #background_apply.con5{
+        background-image: url(../img/img5_w.jpg);
+        opacity: 1;
+        transition-duration: 0.3s;
+    }
+
+    #background_apply.con6{
+        background-image: url(../img/img6_w.jpg);
+        opacity: 1;
+        transition-duration: 0.3s;
+    }
+
+    #background_apply.con7{
+        background-image: url(../img/img7_w.jpg);
+        opacity: 1;
+        transition-duration: 0.3s;
+    }
+
+    #background_apply.con8{
+        background-image: url(../img/img8_w.jpg);
+        opacity: 1;
+        transition-duration: 0.3s;
+    }
+
+    @media screen and (max-width: 1367px){
+    #background_apply{
+        background: url(../images/bg.jpg) repeat-y;
+        background-position: center;
+        opacity: 1;
+    }    
+    }
+
+
+
+        #portfolio{
+            width: 68%;
+            position: relative;
+            left: 16%; top: 85px;
+            z-index: 100;
+            
+        }
+
+            #category{
+                position: fixed;
+                right: 16%; top : 85px;
+                width: 80px;
+                z-index: 200;
+            }
+
+            @media screen and (max-width: 824px){
+            #category{
+                left:4%;
+            }    
+            }
+
+                #category > button{
+                    background: none;
+                    width: 55px; height: 21px;
+                    margin-bottom: 20px;
+                    font-family: sans-serif;
+                    font-weight:bold;
+                    color: #949494;
+                    font-size: 15px;
+                    cursor: pointer;
+                    outline: 0;
+                }
+
+                #category > button::before{
+                    width: 0;
+                    overflow:hidden;
+                    display: block;
+                    content: "";
+                    height: 4px;
+                    float: left;
+                    margin-bottom: 1px;
+                    margin-right:5px;
+                }
+
+
+                #category > button.active{
+                    color:#000;
+                }
+
+                #category > button.active::before{
+                    width: 27px;
+                    background: #ec6941;
+                    overflow:visible;
+                    transition-duration: 0.5s;
+                }
+
+            #contents{
+                width: 100%;   
+                position: absolute;
+                top:-85px;
+                padding-top:85px;
+                padding-bottom: 40px;
+            }
+
+            @media screen and (min-width: 1367px){
+            #contents{
+                background: url(../images/bg.jpg) repeat-y;
+                background-position: center;
+            }                
+            }
+
+            @media screen and (max-width: 326px){
+            #contents{
+                width: 86%; 
+                left:7%;
+            }                
+            }
+
+                #contents > li{
+                    margin-bottom: 45px;
+                    text-align:center;
+                }
+
+                    #contents > li > a{
+                        text-align: center;
+                        display:inline-block;
+                    }
+
+                    /*
+                    #contents > li > a.point_up{
+                        color:#fff;
+                        transition-delay: 0.2s;
+                        transition-duration: 0.2s;
+                    }        
+                    */
+
+                    #contents > li > a:hover{
+                        color:#ec6941;
+                    }    
+
+
+                        #contents > li > a > h4{
+                            font-size: 64px;
+                        }
+
+                        #contents > li > a > h4.korean{
+                            font-size: 60px;
+                            font-weight:bold;
+                        }
+
+                        @media screen and (max-width: 1025px){
+                        #contents > li > a > h4{
+                            font-size: 50px;
+                        }
+                        #contents > li > a > h4.korean{
+                            font-size: 48px;
+                        }
+                        }
+
+                        @media screen and (max-width: 769px){
+                        #contents > li > a > h4{
+                            font-size: 45px;
+                        }
+                        #contents > li > a > h4.korean{
+                            font-size: 37px;
+                        }
+                        }
+
+                        @media screen and (max-width: 376px){
+                        #contents > li > a > h4{
+                            font-size: 40px;
+                        }
+                        #contents > li > a > h4.korean{
+                            font-size: 33px;
+                        }                            
+                        }
+
+                        #contents > li > a > p{
+                            
+                        }    
+
+

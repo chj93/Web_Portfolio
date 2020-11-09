@@ -1,0 +1,99 @@
+/* common.css */
+
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
+@font-face{
+	font-family: 'Nanum Gothic';
+    src: url('../font/NanumGothic-Regular.ttf') format('truetype');
+
+    font-family: 'Nanum Gothic_bold';
+    src: url('../font/NanumGothic-Bold.ttf') format('truetype');    
+}
+
+*{margin: 0; padding: 0;}
+
+html, body, table, tr, th, td, input, select, option, textarea, button{
+	font: 12px 'Nanum Gothic', sans-serif;
+	color: #000;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-size: 1.0em;
+	font-weight: normal;
+}
+img, iframe, fieldset, frameset, input, select, option, textarea, button{
+	border: 0 none;
+	border-radius: 0;
+}
+table, tr, th, td{
+	border-collapse: collapse; /*table기본여백 없애기*/
+}
+ul, ol, li{
+	list-style: none;
+}
+b, strong{
+	font-weight: normal;
+}
+i, em, address{
+	font-style: normal;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+a, img, label{
+	display: block;
+}
+
+.skip, .blind{
+	display: block;
+	height: 0;
+	overflow: hidden;
+
+	position: absolute;
+	top: -6000px;
+}
+
+input#toggle_menu, input#search, input#cart_m{
+    display: none;
+}
+
+/*****  PC & 테블릿  ******/
+@media screen and (min-width: 768px){
+
+}
+
+/*****  테블릿 & 모바일 *****/
+@media screen and (max-width: 1366px){
+
+}
+
+/*****  PC  ******/
+@media screen and (min-width: 1367px){
+.mobile{
+	display:none;
+}
+.tablet_mobile{
+	display: none;
+}
+}
+
+/*****  테블릿  ******/
+@media screen and (min-width: 768px) and (max-width: 1366px){
+.pc{
+	display:none;
+}
+.mobile{
+	display: none;
+}
+}
+
+/*****  모바일  ******/
+@media screen and (max-width: 767px){
+.pc_tablet{
+	display: none;
+}
+.pc{
+    display:none;
+}
+}

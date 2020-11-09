@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>최혜진의 포트폴리오</title>
+<link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
+<link rel="stylesheet" href="css/master.css" />
+<link rel="stylesheet" href="css/contactStyle.css" />
+<script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+<input type="checkbox" id="toggle" />
+
+<div id="wrap">
+
+    <header id="main_header">
+        <label for="toggle" class="toggle"></label>
+        <h2 id="logo"><a href="index.html">최혜진의 포트폴리오</a></h2>
+        <ul id="main_nav">
+            <li><span>01</span><a href="index.html">Main</a></li>
+            
+            <li><span>02</span><a href="about_me.html">About Me</a></li>
+            
+            <li><span>03</span><a href="portfolio.html">Portfolio</a></li>
+            <div class="black_bar"></div>
+            <li class="hover"><span>04</span><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <section id="contact">
+        <article id="direct">
+
+            <div id="hgroup">
+                <h2 class="pc">작업 의뢰 및 채용과 관련해서 문의하고 싶으시다면
+                  <a href =mailto:chj942@gmail.com >chj942@gmail.com</a>으로 메일을 보내주시거나<br />
+                  오른 쪽 폼을 통해 연락 주세요.<br />
+                  확인 후 빠른 시일 내에 연락 드리겠습니다. 감사합니다!</h2>
+
+                  <h2 class="tablet_mobile">작업 의뢰 및 채용과 관련해서 문의하고 싶으시다면
+                    <a href =mailto:chj942@gmail.com >chj942@gmail.com</a>으로 메일을 보내주시거나<br />
+                    아래 폼을 통해 연락 주세요.<br />
+                    확인 후 빠른 시일 내에 연락 드리겠습니다. 감사합니다!</h2>
+
+                <span></span>
+            </div>
+
+            <div id="title">
+                <h4>E-mail</h4>
+                <h4>Phone</h4>
+                <h4>KakaoTalk</h4>
+                <h4>Address</h4>
+            </div>
+
+            <div id="information">
+                <p>chj942@gmail.com</p>
+                <p>+8210-6875-6645</p>
+                <p>chj942</p>
+                <p class="korean">서울시 송파구 잠실동</p>
+            </div>
+        </article>
+
+        <article id="sand_form">
+            <form  method="POST" action="https://formspree.io/chj942@gmail.com">
+                <fieldset>
+                        <legend>필수입력 항목입니다.</legend>
+                        <div id="name">
+                            <label class="label" for="name">회사명 혹은 성함</label>
+                            <input type="text" id="name" placeholder="name"/>
+                        </div>
+
+                        <div id="email">
+                                <label class="label" for="email">이메일 주소</label>
+                                <input type="email" id="email" placeholder="email" />
+                        </div>
+
+                        <div id="message">
+                                <label class="label" for="message">내용</label>
+                                <input type="text" id="message" placeholder="message"/>
+                        </div>
+                        <button>SEND</button>
+
+                </fieldset>
+            </form>
+        </article>
+
+        	
+        	
+        	
+        
+      </section>
+
+    <footer id="main_footer">
+        <ul>
+            <li id="footer_p">Phone</li>
+            <a href="#">010-6875-6645</a>
+                
+            <li id="footer_e">E-mail</li>
+            <a href="mailto:chj942@gmail.com">chj942@gmail.com</a>
+                
+            <li class="black_bar"></li>
+        </ul>
+    </footer>
+
+    <script>
+
+    $(function(){
+        var index=0;
+        
+        $("#footer_p").click(function(){
+            index++;
+            if(index>1){
+                index=0;	
+            }
+            show();	
+        });
+
+        $("#footer_e").click(function(){
+            index--;
+            if(index>1){
+                index=0;	
+            }
+            show2();	
+        });
+
+        function show(){
+            $("footer > ul > a").removeClass("footer_p");
+            $("footer > ul > a:first-of-type").eq(index).addClass("footer_p");	
+        }
+
+        function show2(){
+            $("footer > ul > a").removeClass("footer_p");
+            $("footer > ul > a:last-of-type").eq(index).addClass("footer_p");	
+        }        
+    });          
+    </script>
+
+</div><!--/#wrap-->
+</body>
+</html>

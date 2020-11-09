@@ -1,0 +1,279 @@
+/* headerStyle_pc.css */
+
+#main_header{
+    width: 100%; height: 80px;
+    border-top: 35px solid #000;
+    background: rgba(255,255,255,0.5);
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 100;
+}  
+
+/*******        LOGO          ********/
+
+    #logo{
+        float:left;
+        width: 220px; height: 45px;
+        border-right: 1px solid rgba(0,0,0,0.2);
+    }
+
+        #logo > a{
+        width: 185px; height: 16px;
+        background: url(../images/logo.png) no-repeat;
+        background-size: 100%;
+        margin: 0 auto;
+        text-indent: -6000px;
+        padding-top:14px;
+        background-position-y: bottom;
+        }
+
+/*******        메인메뉴          ********/
+
+    #main_nav{       
+        width: 393px;   height:45px;
+        position: absolute;
+        top: 0; left: 221px;
+    }
+        #main_nav > div{
+            width:100%; height: 100%;
+        }
+       #main_nav >div > ul{
+        overflow:hidden;
+       }
+
+            #main_nav >div > ul > li{
+                width: 130px;    height: 45px;
+                float: left;
+                border-right:1px solid rgba(0,0,0,0.2);
+            }
+
+            #main_nav >div > ul > li:hover{
+                background: #fff;
+                transition-duration: 0.2s;
+            }
+
+                #main_nav >div > ul > li > a{
+                    line-height: 45px;
+                    text-align: center;
+                    font-weight: bold;
+                }
+
+                /************  세부메뉴  ************/
+                #main_nav >div > ul > li > ul{
+                    position: fixed;
+                    left: 0;
+                    width: 100%;
+                    background: #fff;
+                    height: 0;
+                    /*45px*/
+                    overflow:hidden;
+                    padding-left:220px;
+                    box-shadow: 3px 4px 8px rgba(0,0,0,0.2);
+                }
+
+                #main_nav >div > ul > li:hover > ul{
+                    height: 45px;
+                    transition-duration: 0.3s;
+                }
+
+                    #main_nav >div > ul > li > ul > li{
+                        float: left;                       
+                    }
+
+                    #main_nav >div > ul > li > ul > li > a{
+                        line-height: 45px;
+                        margin-right: 50px;
+                        text-transform: capitalize;
+                    }
+
+                    #main_nav >div > ul > li > ul > li > a:hover{
+                        text-decoration: underline;
+                    }
+
+/*******        상단메뉴          ********/
+
+    #top_nav{
+        position: absolute;
+        right:0; top:0;
+        width: 180px; height:45px;
+    }
+
+        #top_nav > ul{
+            position: absolute;
+            width: 100%; height:100%;
+        }
+
+            #top_nav > ul > li{
+                width: 45px;    height: 100%;
+                float:left;
+            }
+
+            #top_nav > ul > li:hover{
+                background: #fff;
+                transition-duration: 0.5s;
+            }
+
+            #top_nav > ul > li#search_warp:hover{
+                cursor:hand;
+            }
+
+                #top_nav > ul > li > a{
+                    text-indent: -6000px;
+                    overflow:hidden;
+                }
+
+                #top_nav > ul > li#language > div,
+                #top_nav > ul > li#member > div,
+                #top_nav > ul > li#cart > div{
+                    width: 180px; height:0;
+                    background: #fff;
+                    position: absolute;
+                    right:0; top:45px;
+                    overflow:hidden;
+                }
+
+                #top_nav > ul > li#language:hover > div,
+                #top_nav > ul > li#member:hover > div,
+                #top_nav > ul > li#cart:hover > div{
+                    height:135px;
+                    transition-duration: 0.3s;
+                }
+
+                    #top_nav > ul > li > div > ul{}
+
+                    #top_nav > ul > li > div > ul > li{
+                        text-align: center;
+                    }
+
+                        #top_nav > ul > li > div > ul > li > a{
+                            line-height: 33px;
+                        }
+
+                        #top_nav > ul > li > div > ul > li > a:hover{
+                            width: 90%;
+                            background: #000;
+                            color:#fff;
+                            margin: 0 auto;
+                        }
+
+            /****       검색        ****/
+
+            #search_warp{
+                position: relative;
+            }
+
+                #search_warp > label.search{
+                    width: 40px; height: 40px;
+                    margin: 12px;
+                    background: url(../images/icon_search.png) no-repeat;
+                    text-indent: -6000px;
+                    overflow: hidden; 
+                    cursor: pointer;  
+                }
+
+                
+
+                input#search ~ #search_textfield{
+                    position: absolute;
+                    right: 45px; top:12px;
+                    width: 0;   height: 20px;
+                    overflow: hidden;
+                    transition-duration: 0.3s;
+                    background: none;
+                }
+
+                input#search:checked + label.search{
+                    background-image: url(../images/icon_close_20x20.png);
+                    transition-delay: 0.3s;
+                    transition-duration: 0.2s;
+                }
+
+                input#search:checked ~ #search_textfield{
+                    width: 170px;
+                }
+
+                
+
+                #search_warp >div > form{
+                    position: absolute;
+                    overflow:hidden;
+                    width:170px; height: 20px;
+                }
+
+                    #search_warp >div > form > fieldset{
+                        width:170px; height: 20px;
+                        position: absolute;
+                    }
+
+                    #search_warp >div > form > fieldset > input{
+                        width: 150px;   height: 20px;
+                        background: none;
+                        border-bottom: 1px solid #000;
+                        color:#000;
+                        text-align:center;
+                        box-sizing: border-box;
+                        position: absolute;
+                        left: 0; top:0;
+                    }
+
+                    #search_warp >div > form > fieldset > button{
+                        width: 20px; height: 20px;
+                        background: url(../images/icon_search.png);
+                        position: absolute;
+                        right:0; top:0;
+                        text-indent: -6000px;
+                        overflow: hidden;
+                    }
+
+            /****       언어        ****/
+
+            #language{
+            }
+
+                #language > a{
+                    width: 20px; height:20px;
+                    background: url(../images/icon_lang.png);
+                    margin:12px;
+                }
+
+                #language > div > ul > li:first-child{
+                    margin-top:2px;
+                }
+
+            /****       맴버쉽        ****/
+
+            #member{}
+
+                #member > a{
+                    background: url(../images/icon_member.png);
+                    width:32px; height:19px;
+                    margin: 13px 7px;
+                }
+
+                        #member > div > ul > li:first-child{
+                            margin-top:16px;
+                        }
+
+            /****       장바구니        ****/
+
+            #cart{
+            }
+
+                #cart > a{
+                    background: url(../images/icon_cart.png);
+                    width: 20px; height:20px;
+                    margin: 12px;
+                }
+                
+                        #cart > div > ul > li:first-child{
+                        padding: 40px 0;
+                        }
+
+                            #cart > div > ul > li > a{
+                                width: 90%;
+                                background: #000;
+                                color:#fff;
+                                margin: 0 auto;
+                            }
+
+

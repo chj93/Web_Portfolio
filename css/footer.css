@@ -1,0 +1,72 @@
+/* footer.css */
+
+footer{
+    width: 16%;
+    height: 76%;
+    position: fixed;
+    right: -3%; 
+    z-index:150;
+}
+@media screen and (min-height: 610px){
+    footer{
+        top:0;
+    } 
+}
+
+@media screen and (max-height: 610px){
+footer{
+    bottom: 80px;
+}    
+}
+
+footer > ul{
+    width: 20px; height: 400px;
+    writing-mode: tb-rl;
+    position: absolute;
+    bottom: 0; right: 88px;
+}
+
+@media screen and (max-width: 1366px){
+footer > ul{
+    right: 50%;
+}   
+}
+
+footer > ul > li{
+    float:right;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+footer > ul > li:hover{
+    text-decoration: overline;
+    transition-duration: 0.3s;
+}
+
+
+footer > ul > li.black_bar{
+    margin-right:10px;
+    cursor: default;
+}
+@media screen and (min-height: 610px){
+footer > ul > li.black_bar{
+
+}    
+}
+
+
+footer > ul > a{
+    position: absolute;
+    bottom:252px; left: 0;
+    opacity: 0;
+    width: 20px; height: 0;
+}
+
+
+
+footer > ul > a.footer_p{
+    display: block;
+    opacity: 1;
+    height:auto;
+    transition-duration: 0.3s;
+}

@@ -1,0 +1,28 @@
+/* sectionStyle.css */
+
+@import url('videoStyle.css');
+@import url('newsStyle.css');
+@import url('projectStyle.css');
+
+#section_wrap{
+    width: 100%;
+}
+
+        #section_wrap > section > h3{
+            font-size: 20px;
+            padding: 44px 0;
+            height:30px;
+            line-height: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+
+
+/*임시 - 나중에 지울 것*/
+#quick_menu{
+    display:none;
+}
+#store{
+    width: 100%; float:left;
+}

@@ -1,0 +1,65 @@
+/* projectStyle.css */
+
+#project{
+    width: 100%;    height: 580px;
+    float:left;
+    background: #ccc;
+}
+
+    #project > h3{}
+
+    #project > article{
+        width: 62%;    height: 390px;
+        background: #888;
+        margin: 0 auto;
+        overflow:hidden;
+        position: relative;
+    }
+
+        #project > article > div{
+            width: 11%; 
+            height: 100%;
+            background: #000; 
+            display: inline-block;
+           
+        }
+
+            #project > article > div > .btn{
+                width: 100%; height: 100%;
+                background: url(../images/btn_product_once_upon_a_future.jpg);
+                background-position: right top;
+                background-size: cover;
+                box-sizing: border-box;
+                display: inline-block;   
+            }
+
+
+                #project > article > div > .btn > span{
+                    width: 1px; height: 30px;
+                    background: #fff;
+                    display: inline-block;   
+                    margin-left: 78%;
+                }
+
+                #project > article > div > .btn > h4{
+                    color: #fff;
+                    writing-mode: tb-rl;
+                    
+                    margin-right: 15%;
+                    margin-top: 5%;
+                    font-weight: bold;
+                }
+
+
+            #project > article > div > .con{
+               display:none;
+            }
+
+            #project > article > div > .hover{
+                width: ; height: 100%;
+                display: inline-block; 
+
+            }
+
+
+

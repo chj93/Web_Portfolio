@@ -1,0 +1,21 @@
+/* marster.css */
+
+@import url(common.css);
+@import url(headerStyle.css);
+
+#wrap{width: 100%;}
+#main_footer{width: 100%;}
+/* 
+
+< z-index >
+
+- PC
+    #main_header : 100
+
+- mobile
+    #main_header : 100
+    #search_warp : 110 
+    #main_nav : 200
+    label.toggle_menu : 210
+
+*/

@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>최혜진의 포트폴리오</title>
+<link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
+<link rel="stylesheet" href="css/master.css" />
+<link rel="stylesheet" href="css/slider.css" />
+<script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+<input type="checkbox" id="toggle" />
+
+<div id="wrap">
+
+    <header id="main_header">
+        <label for="toggle" class="toggle"></label>
+        <h2 id="logo"><a href="index.html">최혜진의 포트폴리오</a></h2>
+        <ul id="main_nav">
+            <li class="hover"><span>01</span><a href="index.html">Main</a></li>
+            <div class="black_bar"></div>
+            <li><span>02</span><a href="about_me.html">About Me</a></li>
+            
+            <li><span>03</span><a href="portfolio.html">Portfolio</a></li>
+            
+            <li><span>04</span><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <script>
+    $(function(){
+        var index=0;
+        var width=0;
+        
+        $("#slider > .btn_next").click(function(){
+            $(".slider_bar > ul > li.timer_bar > .timer").css({width:0});
+            $(".slider_bar > ul > li.timer_bar > .timer").stop().animate({ width:100+"%"},3000);
+
+            index++;
+            if(index>7){
+                index=0;	
+            }
+            show();
+            //$(".slider_bar > ul > li.count > p.current");
+            //.slider_bar > ul > li.timer_bar > .timer
+            $(".slider_bar > ul > li.count > p.current").text("0"+(index+1));
+        });
+        
+        $(" #slider > .btn_prev").click(function(){
+            $(".slider_bar > ul > li.timer_bar > .timer").css({width:0});
+            $(".slider_bar > ul > li.timer_bar > .timer").stop().animate({ width:100+"%"},3000);
+
+            index--;
+            if(index<0){
+                index=7;	
+            }
+            show();	
+            $(".slider_bar > ul > li.count > p.current").text("0"+(index+1));
+            
+        });
+
+        autoSlide();
+        
+        function show(){
+            $("#slider > article").removeClass("show");
+            $("#slider > article").eq(index).addClass("show");	
+        }
+
+        function autoSlide(){
+            $(".slider_bar > ul > li.timer_bar > .timer").css({width:0});
+            $(".slider_bar > ul > li.timer_bar > .timer").stop().animate({ width:100+"%"},3000);
+            setInterval(function(){
+                $("#slider > .btn_next").click();
+            },5000);
+        }
+        
+    });
+
+        </script>
+
+    <section id="slider">
+        <article id="slider_con1" class="show">
+            <div class="title">
+                <h4>Respansive Web</h4>
+                <h3>Dong Wha Pharm</h3>
+            </div>
+            <div class="img b1"><a href="dongwha.html">배너1</a></div>        
+        </article>
+
+        <article id="slider_con2">
+            <div class="title">
+                <h4>Respansive Web</h4>
+                <h3>Gentlemonter</h3>
+            </div>
+            <div class="img b2"><a href="gentlemonster.html">배너2</a></div>
+        </article>
+        
+        <article id="slider_con3">
+            <div class="title">
+                <h4>Respansive Web</h4>
+                <h3>Kbank</h3>
+            </div>
+            <div class="img b3"><a href="kbank.html">배너3</a></div>
+        </article>
+
+        <article id="slider_con4">
+            <div class="title">
+                <h4>Web & Mobile</h4>
+                <h3>Aritaum</h3>
+            </div>
+            <div class="img b4"><a href="aritaum.html">배너4</a></div>
+        </article>
+
+        <article id="slider_con5">
+            <div class="title">
+                <h4>Stage Design</h4>
+                <h3>오뚝이 아저씨 자빠졌다</h3>
+            </div>
+            <div class="img b5"><a href="stage1.html">배너5</a></div>
+        </article>
+        <article id="slider_con6">
+            <div class="title">
+                <h4>Stage Design</h4>
+                <h3>인어전설</h3>
+            </div>
+            <div class="img b6"><a href="stage2.html">배너6</a></div>
+        </article>
+        <article id="slider_con7">
+            <div class="title">
+                <h4>Stage Design</h4>
+                <h3>사천의 선인</h3>
+            </div>
+            <div class="img b7"><a href="stage3.html">배너7</a></div>
+        </article>
+        <article id="slider_con8">
+            <div class="title">
+                <h4>Stage Design</h4>
+                <h3>인생차압 : 살아있는 이중생 각하</h3>
+            </div>
+            <div class="img b8"><a href="stage4.html">배너8</a></div>
+        </article>
+
+
+        <script>
+        $(function(){
+            $(".slider_bar").mouseenter(function(){
+                $(this).addClass("hover");
+                $("#slider").addClass("hover");
+            });
+            $("#hover_bar").mouseleave(function(){
+                $(".slider_bar").removeClass("hover");
+                $("#slider").removeClass("hover");
+            });
+        });
+        </script>
+        <div class="slider_bar">            
+            <ul>
+                <li class="count">
+                    <p class="current">01</p>
+                    <span>-</span>
+                    <p class="total">08</p>
+                </li>
+                <li class="timer_bar">
+                    <span class="timer"></span>
+                </li>
+            </ul>
+        </div>
+
+        <button class="btn_prev">Prev</button>
+        <button class="btn_next">Next</button>
+
+        <div id="hover_bar">
+            <ul>
+                <li id="web_publishing">
+                    <h4>Web Publishing & Design</h4>
+                    <a href="dongwha.html" id="web_p1"></a>
+                    <a href="gentlemonster.html" id="web_p2"></a>
+                    <a href="aritaum.html" id="web_p3" class="p3"></a>
+                    <a href="kbank.html" id="web_p4" class="p4"></a>
+                </li>
+                <li id="stage_design">
+                    <h4>Stage Design</h4>
+                    <a href="stage1.html" id="stage_p1"></a>
+                    <a href="stage2.html" id="stage_p2"></a>
+                    <a href="stage4.html" id="stage_p3" class="p3"></a>
+                    <a href="stage3.html" id="stage_p4" class="p4"></a>
+                </li>
+
+                <button class="btn_next"></button>
+                
+                <button class="btn_prev"></button>
+            
+            </ul>
+            
+        </div> <!--/#hover_bar-->
+    </section>
+
+    <script>
+    $(function(){
+        $("#hover_bar > ul > li > a#web_p1").mouseenter(function(){
+            $(this).addClass("show");
+            $("#slider_con2, #slider_con3, #slider_con4, #slider_con5, #slider_con6, #slider_con7, #slider_con8").removeClass("show");
+            $("#slider > #slider_con1").addClass("show");         
+        });
+
+
+        $("#hover_bar > ul > li > a#web_p2").mouseenter(function(){
+            $(this).addClass("show");
+            $("#slider_con1, #slider_con3, #slider_con4, #slider_con5, #slider_con6, #slider_con7, #slider_con8").removeClass("show");
+            $("#slider > #slider_con2").addClass("show"); 
+        });
+
+        $("#hover_bar > ul > li > a#web_p3").mouseenter(function(){
+            $(this).addClass("show");
+            $("#slider_con1, #slider_con2, #slider_con3, #slider_con5, #slider_con6, #slider_con7, #slider_con8").removeClass("show");
+            $("#slider > #slider_con4").addClass("show"); 
+        });
+
+        $("#hover_bar > ul > li > a#web_p4").mouseenter(function(){
+            $(this).addClass("show");
+            $("#slider_con1, #slider_con2, #slider_con4, #slider_con5, #slider_con6, #slider_con7, #slider_con8").removeClass("show");
+            $("#slider > #slider_con3").addClass("show"); 
+        });
+
+        $("#hover_bar > ul > li > a#stage_p1").mouseenter(function(){
+            $(this).addClass("show");
+            $("#slider_con1, #slider_con2, #slider_con3, #slider_con4, #slider_con6, #slider_con7, #slider_con8").removeClass("show");
+            $("#slider > #slider_con5").addClass("show"); 
+        });
+
+        $("#hover_bar > ul > li > a#stage_p2").mouseenter(function(){
+            $(this).addClass("show");
+            $("#slider_con1, #slider_con2, #slider_con3, #slider_con4, #slider_con5, #slider_con7, #slider_con8").removeClass("show");
+            $("#slider > #slider_con6").addClass("show"); 
+        });
+
+        $("#hover_bar > ul > li > a#stage_p3").mouseenter(function(){
+            $(this).addClass("show");
+            $("#slider_con1, #slider_con2, #slider_con3, #slider_con4, #slider_con5, #slider_con6, #slider_con8").removeClass("show");
+            $("#slider > #slider_con7").addClass("show"); 
+        });
+
+        $("#hover_bar > ul > li > a#stage_p4").mouseenter(function(){
+            $(this).addClass("show");
+            $("#slider_con1, #slider_con2, #slider_con3, #slider_con4, #slider_con5, #slider_con6, #slider_con7").removeClass("show");
+            $("#slider > #slider_con8").addClass("show"); 
+        });
+
+
+    });
+    </script>
+
+    <script>
+            $(function(){
+
+            var leftValue=0; 
+            $("#hover_bar > ul > button.btn_next, #hover_bar > ul > #web_publishing > h4").click(function(){
+                leftValue=leftValue-100;
+                if(leftValue < -100){
+                    $("#hover_bar > ul").css({left:-100+"%"});
+                    leftValue=-100;
+                }
+                $("#hover_bar > ul").stop().animate({left:leftValue+"%"},500);
+            });
+
+            $("#hover_bar > ul > button.btn_prev, #hover_bar > ul > #stage_design > h4").click(function(){
+                leftValue=leftValue+100;
+                
+                if(leftValue > 0){
+                    $("#hover_bar > ul").css({left:0+"%"});
+                    leftValue=-100;
+                }
+                $("#hover_bar > ul").stop().animate({left:leftValue+"%"},500);
+            });
+            });
+    </script>
+        
+    <footer id="main_footer">
+        <ul>
+            <li id="footer_p">Phone</li>
+            <a href="#">010-6875-6645</a>
+                
+            <li id="footer_e">E-mail</li>
+            <a href="mailto:chj942@gmail.com">chj942@gmail.com</a>
+                
+            <li class="black_bar"></li>
+        </ul>
+    </footer>
+
+    <script>
+
+    $(function(){
+        var index=0;
+        
+        $("#footer_p").click(function(){
+            index++;
+            if(index>1){
+                index=0;	
+            }
+            show();	
+        });
+
+        $("#footer_e").click(function(){
+            index--;
+            if(index>1){
+                index=0;	
+            }
+            show2();	
+        });
+
+        function show(){
+            $("footer > ul > a").removeClass("footer_p");
+            $("footer > ul > a:first-of-type").eq(index).addClass("footer_p");	
+        }
+
+        function show2(){
+            $("footer > ul > a").removeClass("footer_p");
+            $("footer > ul > a:last-of-type").eq(index).addClass("footer_p");	
+        }        
+    });          
+    </script>
+
+</div><!--/#wrap-->
+</body>
+</html>

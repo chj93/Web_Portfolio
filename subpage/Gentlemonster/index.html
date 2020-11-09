@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>gentle monster 리뉴얼</title>
+<link rel="stylesheet" href="css/marster.css" />
+<link rel="stylesheet" href="css/sectionStyle.css" />
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/modernizr.js"></script>
+<script defer src="js/jquery.flexslider-min.js"></script>
+</head>
+<body>
+
+	<input id="toggle_menu" type="checkbox" />
+	<div id="wrap">
+
+        <div class="skip">
+                <a href="#main_nav">메인메뉴 바로가기</a>
+                <a href="#contents_wrap">본문 바로가기</a>
+                <a href="#main_footer">푸터 바로가기</a>
+        </div><!--/ .skip-->
+            <!------------------------------- 헤더 ------------------>
+            <header id="main_header">
+               
+                <!----------------------- 로고 ------------------------------->
+                <h1 id="logo">
+                    <a href="#">gentle monster</a>
+                </h1>
+
+                <script>
+					$(function(){
+						var mainNavAry=[false, false, false, false];
+						$("#main_nav > div > ul > li").click(function(){
+							var index=$(this).index();
+							mainNavAry[index]=!mainNavAry[index];
+							if(mainNavAry[index]){
+								$(this).addClass("active");
+							}else{
+								$(this).removeClass("active");
+							}
+						});
+					});
+                </script>
+
+                <!----------------------- 메인메뉴 ------------------------------->
+                <label class="toggle_menu tablet_mobile" for="toggle_menu">메인메뉴</label>
+                <nav id="main_nav">
+                    <div>
+                        <!----- 모바일 용 : member ------>
+                        
+                        <ul class="tablet_mobile" id="m_member">
+                            <li><a href="#">LOGIN</a></li>
+                            <li><a href="#">JOIN</a></li>
+                        </ul>
+                        <!-----/ 모바일 용 : member ------>
+                        <ul>
+                            <li>
+                                <a href="#" class="pc">SHOP</a>
+                                <h3 class="tablet_mobile">SHOP</h3>
+                                <ul>
+                                    <li><a href="#">선글라스</a></li>
+                                    <li><a href="#">안경</a></li>
+                                    <li><a href="#">익스쿨루시브</a></li>
+                                    <li><a href="#">콘셉트피스</a></li>
+                                    <li><a href="#">협업</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#" class="pc">PROJECT</a>
+                                <h3 class="tablet_mobile">PROJECT</h3>
+                                <ul>
+                                    <li><a href="#">Editorials</a></li>
+                                    <li><a href="#">Campaigns</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#" class="pc">STORE</a>
+                                <h3 class="tablet_mobile">STORE</h3>
+                                <ul>
+                                    <li><a href="#">flagship store</a></li>
+                                    <li><a href="#">stockists</a></li>
+                                    <li><a href="#">department store</a></li>
+                                </ul>
+                            </li>
+
+                                <!----- 모바일 용 : LANGUAGE ------>
+                            <li class="tablet_mobile" id="lang_m">
+                                <h3>LANGUAGE</h3>
+                                <ul>
+                                    <li><a href="#">한국어</a></li>
+                                    <li><a href="#">ENGLISH</a></li>
+                                    <li><a href="#">中文</a></li>
+                                    <li><a href="#">日本語</a></li>
+                                </ul>
+                            </li>
+                            <!-----/ 모바일 용 :LANGUAGE ------>
+                        </ul>
+                    </div>
+                </nav><!--/ #main_nav-->
+
+
+                <!----------------------- 상단메뉴 ------------------------------->
+                <nav id="top_nav">
+                    <ul>
+                        <li id="search_warp">
+                            <input id="search" type="checkbox"/>
+                            <label class="search" for="search">검색</label>
+                            
+                            <div id="search_textfield">
+                                <form>
+                                    <fieldset>
+                                        <input type="text" id="search_textfield" placeholder="검색어를 입력하세요."/>
+                                        <button class="btn_search">검색하기</button>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!----------pc용 : language, member, cart------------>
+                        <li id="language" class="pc">
+                            <a href="#">language</a>
+                            <div>
+                                <ul>
+                                    <li><a href="#">한국어</a></li>
+                                    <li><a href="#">ENGLISH</a></li>
+                                    <li><a href="#">中文</a></li>
+                                    <li><a href="#">日本語</a></li>
+                                </ul>
+                            </div>
+
+                        </li>
+
+                        <li id="member" class="pc">
+                            <a href="#">member</a>
+                            <div>
+                                <ul>
+                                    <li><a href="#">LOGIN</a></li>
+                                    <li><a href="#">JOIN</a></li>
+                                    <li><a href="#">MY PAGE</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        
+                        <li id="cart" class="pc">
+                            <a href="#">cart</a>
+                            <div>
+                                <ul>
+                                    <li>담긴 제품이 없습니다.</li>
+                                    <li><a href="#" class="bg_black">SHOP</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <!----------/ pc, 테블릿 용 : language, member, cart------------>
+                </nav>
+                <!------------모바일용 : cart----------->
+                <nav id="cart_mobile" class="tablet_mobile">
+                    <label class="cart_mobile" for="cart_m">장바구니</label>
+                    <input id="cart_m" type="checkbox" />
+                    <div id="cart_m_check">
+                        <ul>
+                            <li>담긴 제품이 없습니다.</li>
+                            <li><a href="#">SHOP</a></li>
+                        </ul>
+                    </div>
+                </nav>
+        </header>
+
+            <!-------------- 퀵메뉴 -------------->
+            <aside id="quick_menu" class="pc">
+                <div></div>
+                <ul>
+                    <li>TOP</li>
+                    <li>NEWS</li>
+                    <li>PROJECT</li>
+                    <li>STORE</li>
+                </ul>
+            </aside>
+
+            <div id="section_wrap">
+            <!----------------------------------------- 영상 ----------------------------------------------->
+                <section class="video">
+                    <article>
+                        <div class="pc_tablet">
+                            <video width="100%" poster="images/raincoat_pc.jpg" autoplay muted loop>
+                                <source src="video/raincoat_re.mp4" type="video/mp4" />
+                                
+                            </video>
+                        </div>
+
+                        <div class="mobile">
+                            <video width="100%" poster="images/" autoplay muted loop>
+                                <source src="video/raincoat_m_re.mp4" type="video/mp4" class="mobile"/>
+                        </div>
+
+                        
+                        <ul>
+                            <li id="video_title">
+                                <h4>gentle monter X xanderzhou</h4>
+                                <h3>GMXZ Coat</h3>
+                                <h5>젠틀 몬스터와 샌더주 협업</h5>
+                            </li>
+                            <li id="video_more">
+                                <a href="#" class="bg_black">자세히보기</a>
+                                <a href="#" class="bg_black">구매하기</a>
+                            </li>
+                        </ul>
+                        
+                    </article>
+                </section><!--.video-->
+
+                <!----------------------------------------- news ----------------------------------------------->
+
+
+                <section id="news">
+                    <h3>NEWS </h3>
+
+                    <div>
+                        <article>
+                            <img src="images/news01.jpg" art="ceo 제품사진" /> 
+                            <div>
+                                <h2>CEO</h2>
+                                <p>GENTLE MONSTER X ALEXANDER WANG<br />9월 8일 10:00AM</p>
+                                <a href="#" class="bg_black">자세히보기</a>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img src="images/news02.jpg" art="GMXZ coat 제품사진" />
+                            <div>
+                                <h2>GMXZ coat</h2>
+                                <p>gentle monter X xanderzhou</p>
+                                <a href="#" class="bg_black">자세히보기</a>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img src="images/news03.jpg" art="런던 플래그쉽 스토어 사진" />
+                            <div>
+                                <h2>Recently Open</h2>
+                                <p>London, United Kingdom  'KUNGFU'</p>
+                                <a href="#" class="bg_black">자세히보기</a>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img src="images/news04.jpg" art="ONCE UPON A FUTURE 컬렉션 사진" />
+                            <div>
+                                <h2>ONCE UPON A FUTURE</h2>
+                                <p>2018 CAPSULE COLLECTION</p>
+                                <a href="#" class="bg_black">자세히보기</a>
+                            </div>
+                        </article>
+
+                        <article class="pc">
+                            <img src="images/news05.jpg" art="RED WIDE OPEN 컬렉션 사진" />
+                            <div>
+                                <h2>RED WIDE OPEN</h2>
+                                <p>2018 S&#47;S COLLECTION</p>
+                                <a href="#" class="bg_black">자세히보기</a>
+                            </div>
+                        </article>
+                    </div>    
+                </section><!--/ #news-->
+
+                <!----------------------------------------- PROJECT ----------------------------------------------->
+                <section id="project">
+                    <h3>PROJECT</h3>
+
+                    <article>
+                        <div class="list1">
+                            <!--버튼이미지-->
+                            <div class="btn">
+                                <span></span>
+                                <h4>ONCE UPON A FUTURE</h4>
+                                <!--<img class="pc_tablet" src="images/btn_product_once_upon_a_future.jpg" alt="ONCE UPON A FUTURE"/>
+                                <img class="mobile" src="images/btn_product_once_upon_a_future_m.jpg" alt="ONCE UPON A FUTURE"/>-->
+                            </div>
+
+                            <!--내용: #btn 클릭시 #project 배경도 변화-->
+                            <div class="con hover">
+                                <video class="pc_tablet"></video>
+                                <a href="#" class="mobile"></a>
+                                <h4>CAPSULE COLLECTION:ONCE UPON A FUTURE</h4>
+                                <p class="pc">Once Upon a Future, the world has fallen to dystopia. The rules that once kept the world in order no longer apply and creatures that lie somewhere between aliens and androids are now living amongst human beings.</p>
+                                <a href="#" class="pc_tablet">자세히보기</a>
+                            </div>
+                        </div>
+
+                        <div class="list2">
+                            <div class="btn">
+                                <span></span>
+                                <h4>LARGER THAN LIFE</h4>
+                            </div>
+
+                            <div class="con">
+                                <img class="pc_tablet" src="" alt=""/>
+                                <a href="#" class="mobile"></a>
+                                <h4>LARGER THAN LIFE</h4>
+                                <p class="pc">Photography: Timothy Schaumburg Stylist: Dogi Hair/Make-up: manu kopp</p>
+                                <a href="#" class="pc_tablet">자세히보기</a>
+                            </div>
+                        </div>
+
+                        <div class="list3">
+                            <div class="btn">
+                                <span></span>
+                                <h4>제목3</h4>
+                            </div>
+
+                            <div class="con">
+                                <img class="pc_tablet" src="" alt=""/>
+                                <a href="#" class="mobile"></a>
+                                <h4></h4>
+                                <p class="pc"></p>
+                                <a href="#" class="pc_tablet">자세히보기</a>
+                            </div>
+                        </div>
+                        <div class="list4">
+                            <div class="btn">
+                                <span></span>
+                                <h4>제목4</h4>
+                            </div>
+
+                            <div class="con">
+                                <img class="pc_tablet" src="" alt=""/>
+                                <a href="#" class="mobile"></a>
+                                <h4></h4>
+                                <p class="pc"></p>
+                                <a href="#" class="pc_tablet">자세히보기</a>
+                            </div>
+                        </div>  
+                    </article>
+                </section><!--/ #project-->
+
+                <!----------------------------------------- STORE ----------------------------------------------->
+
+                <section id="store">
+                    <h3>STORE</h3>
+
+                    <div id="store_img">
+                        <img src="" />
+                    </div>
+
+                    <div id="store_article">
+                        <article>
+                            <div>
+                                <hgroup>
+                                    <h5></h5>
+                                    <h4></h4>
+                                </hgroup>
+
+                                <p class="pc"></p>
+                            </div>
+                        </article>
+                    </div>
+                                    
+                <button class="icon_prev"></button>
+                <button class="icon_next"></button>
+
+                <ul class="pc">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>    
+                </section><!--/ #store-->
+
+            </div><!--/ #section_wrap-->
+
+            <!----------------------------------------- FOOTER ----------------------------------------------->
+
+            <footer id="main_footer">
+                <ul id="footer_menu">
+                    <li><a href="#">CODE PINK</a></li>
+                    <span>|</span>
+                    <li><a href="#">고객센터</a></li>
+                    <span>|</span>
+                    <li><a href="#">문의</a></li>
+                </ul>
+
+                <div id="address">
+                    <p class="pc">
+                    주) 아이아이컴바인드 . 대표자명 : 김한국 . 사업자 번호 : 119-86-38589 . 통신판매신고번호 : 제 2014-서울마포-1050 호 .<br /> 
+                    주소 : 서울특별시 마포구 어울마당로5길 41 전화번호 : 1600-2126<br />
+                    © 2018 GENTLE MONSTER
+                    </p>
+
+                    <p class="mobile">
+                    주) 아이아이컴바인드 . 대표자명 : 김한국<br /> 사업자 번호 : 119-86-38589 . 통신판매신고번호 : 제 2014-서울마포-1050호<br /> 
+                    주소 : 서울특별시 마포구 어울마당로5길 41 전화번호 : 1600-2126<br />
+                    © 2018 GENTLE MONSTER
+                    </p> 
+
+                </div>
+                <div id="sns">
+                    <img src="images/icon_sns.png" alt="sns 아이콘 모음" usemap="#goLink" />
+                    <map name="goLink">
+                        <area shape="rect" coords="2,8,26,34 " href="https://www.instagram.com/gentlemonster/ " target="_blank" alt="인스타그램으로 이동"" />
+                        <area shape="rect" coords="59,8,83,34" href="#" target="_blank" alt="페이스북으로 이동"" />
+                        <area shape="rect" coords="112,8,138,34" href="#" target="_blank" alt="트위터로 이동" />
+                        <area shape="rect" coords="168,8,196,34" href="#" target="_blank" alt="핀터레스트로 이동" />
+                        <area shape="rect" coords="230,8,260,34" href="#" target="_blank" alt="위쳇으로 이동" />
+                    </map>
+                </div>
+            </footer>
+
+
+    </div><!--/ #wrap-->
+</body>
+</html>

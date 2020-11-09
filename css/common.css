@@ -1,0 +1,77 @@
+/* common.css */
+
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR');
+
+@font-face{
+	font-family: 'EBGaramond';
+	src: url('../font/EBGaramond-Medium.ttf') format('truetype');
+}
+
+@font-face{
+	font-family: 'EBGaramond_bold';
+	src: url('../font/EBGaramond-SemiBold.ttf') format('truetype');
+}
+
+@font-face{
+	font-family: 'NotoSerifKR';
+	src: url('../font/NotoSerifKR-Regular.otf') format('opentype');
+}
+
+*{margin: 0; padding: 0;}
+
+html, body, table, tr, th, td, input, select, option, textarea, button{
+	font: 16px 'EBGaramond', sans-serif;
+    color: #000;
+    letter-spacing: -0.02em;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-size: 1.0em;
+	font-weight: normal;
+}
+img, iframe, fieldset, frameset, input, select, option, textarea, button{
+	border: 0 none;
+	border-radius: 0;
+}
+table, tr, th, td{
+	border-collapse: collapse;
+}
+ul, ol, li{
+	list-style: none;
+}
+b, strong{
+	font-weight: normal;
+}
+i, em, address{
+	font-style: normal;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+a, img, label{
+	display: block;
+}
+
+legend{
+	display: none;
+}
+
+.black_bar{
+	width: 1px; height: 130px;
+	background: #000;
+}
+
+.korean{
+	font-family: 'NotoSerifKR';
+}
+
+/**  PC  **/
+@media screen and ( min-width: 1367px){
+	label.toggle{
+		display:none;	
+	}
+}
+
+

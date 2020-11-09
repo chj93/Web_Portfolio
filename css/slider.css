@@ -1,0 +1,357 @@
+/* slider.css */
+
+#slider{
+    width: 68%;  height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+    #slider > article{
+        width: 100%; height: 76%;
+        position: absolute;
+        top: 0; left:0;
+    }
+    @media screen and (max-width: 1366px){
+    #slider > article{
+        height:100%;
+    }    
+    }
+
+    #slider > article{
+        opacity: 0;
+        
+    }
+
+    #slider > article.show{
+        opacity:1;
+        z-index:20;
+        transition-duration: 1.0s;
+    }    
+
+        #slider > article > .title{
+            width: 100%; height: 32%;
+            text-align: center;
+            position: absolute;
+            top: 0; left:0;
+
+        }
+
+        @media screen and (max-width: 1366px){
+        #slider > article > .title{
+            height: 20%;
+        }    
+        }
+        
+
+        #slider > #slider_con5, #slider_con6, #slider_con7, #slider_con8 > .title > h3{
+            font-family: 'NotoSerifKR';
+        }
+
+            #slider > article > .title > h4{
+                font: 18px 'EBGaramond';
+                background : url(../images/blackbar.jpg) no-repeat;
+                background-position: center top;
+                margin: 4% 0 0;
+                line-height: 30px;
+            
+            }
+
+            #slider > article > .title > h3{
+                font-size: 46px;
+            }
+
+
+            @media screen and (max-width: 1366px){
+            #slider > article > .title > h3{
+                font-size: 40px;
+            }
+            }
+
+            @media screen and (max-width: 376px){
+            #slider > article > .title > h3{
+                font-size: 35px;
+            }
+            }
+
+
+        #slider > article > .img{
+            width: 100%; height: 68%;
+            position: absolute;
+            bottom: 0; left:0;
+            text-indent: -6000px;
+            overflow: hidden;
+
+        }
+
+        @media screen and (max-width: 1366px){
+        #slider > article > .img{
+            height: 80%;
+        } 
+        }
+
+            #slider > article > .img > a{
+                width:100%; height: 100%;
+                background : url(../img/img1.jpg) no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+
+            #slider > article > .b1 > a{
+                background-image: url(../img/img1.jpg);
+            }
+
+            #slider > article > .b2 > a{
+                background-image:  url(../img/img2.jpg);
+            }
+            #slider > article > .b3 > a{
+                background-image:  url(../img/img4.jpg);
+            }
+            #slider > article > .b4 > a{
+                background-image:  url(../img/img3.jpg);
+            }
+            #slider > article > .b5 > a{
+                background-image:  url(../img/img5.jpg);
+            }
+            #slider > article > .b6 > a{
+                background-image:  url(../img/img6.jpg);
+            }
+            #slider > article > .b7 > a{
+                background-image:  url(../img/img7.jpg);
+            }
+            #slider > article > .b8 > a{
+                background-image:  url(../img/img8.jpg);
+            }
+
+
+
+    #slider > .slider_bar{
+        width: 100%;    height: 17%;
+        position: absolute;
+        bottom: 0; left: 0;
+    }
+
+    @media screen and (max-width: 1366px){
+    #slider > .slider_bar{
+        display:none;
+    }
+    }
+
+    #slider > .slider_bar::before{
+        content: "";
+        display: block;
+        height: 0; opacity: 0;
+        position: fixed; left: 0; right: 0; bottom: 0;
+        background: #ddd;
+    }
+    #slider.hover > .slider_bar::before{
+        height: 70px; opacity: 1;
+        transition-duration: 0.8s;
+        transition-property: opacity;
+    }
+        .slider_bar > ul{
+            width: 280px;   height: 22px;
+            position: absolute;
+            bottom: 40px; left: 50%;
+            margin-left: -140px;
+        }
+
+            .slider_bar > ul > li{
+                font-size: 14px;
+            }
+
+            .slider_bar > ul > li.count{
+                float: right;
+                
+            }
+
+                .slider_bar > ul > li.count > p{
+                    display: inline-block;
+                }
+
+                .slider_bar > ul > li.count > p.current{
+                    color: #ec6941;
+                    font-weight: bold;
+                }
+                .slider_bar > ul > li.count > span{
+                    
+                }
+
+            .slider_bar > ul > li.timer_bar{
+                width: 280px; height: 4px;
+                background: #7b7468;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .slider_bar > ul > li.timer_bar > .timer{
+                position: absolute;
+                height: 100%; width: 0;
+                background: #ec6941;
+            }
+
+            @keyframes timerbar{
+                from{width:0;}
+                to{width: 100%;}	
+            }
+
+
+
+    #slider > button{
+        width: 30px;
+        background: none;
+        position: absolute;
+        bottom: 32px; 
+        cursor: pointer;
+        z-index: 200;
+    }
+    @media screen and (min-width: 1367px){
+    #slider > button{
+        left: 50%;
+    }
+
+    }
+    #slider > .btn_prev{
+        margin-left: -185px;
+    }
+
+    #slider > .btn_next{
+        margin-left: 159px;
+    }
+
+    @media screen and (max-width: 1367px){
+    #slider > .btn_prev{
+        left: -15%;
+        margin: 0;
+    }
+
+    #slider > .btn_next{
+        right: -15%;
+        margin: 0;
+    }
+    }
+
+    /*마우스 오버 영역*/
+
+    .slider_bar.hover~#hover_bar{
+        height: 17%;
+        transition-duration: 0.3s;
+
+    }
+
+    #hover_bar{
+        position: fixed;
+        bottom: 0; left: 0;
+        width: 100%; height: 0;
+    }
+
+    @media screen and (max-width: 1366px){
+    #hover_bar{
+        display:none;
+    }   
+    }
+
+        #hover_bar > ul{
+            width: 200%;    height: 100%;
+            z-index: 60;
+            position: absolute;
+            top:0; left: 0%;
+            z-index: 100;
+            
+        }
+
+            #hover_bar > ul > li{
+                width: 50%; height: 100%;
+                float: left;
+            }
+
+                #hover_bar > ul > li> h4{
+                    position: absolute; top: 15%;
+                    width: 170px;
+                    text-align: center;
+                    margin-left: -80px;
+                    cursor: pointer;
+                }
+
+                #hover_bar > ul > #web_publishing > h4{
+                left: 25%; 
+                }
+
+                #hover_bar > ul > #stage_design > h4{
+                    left: 75%;
+                }            
+
+                #hover_bar > ul > li > a{
+                    width: 13%; height: 75%;
+                    background: #ccc;
+                    background-size: cover;
+                    background-position: center;
+                    float: left;
+                    margin: 0 2%;
+                    
+                }
+
+                #hover_bar > ul > li > a.p4, 
+                #hover_bar > ul > li > a.p3{
+                    float: right;
+                }
+                
+                #hover_bar > ul > #web_publishing > a#web_p1{
+                    background-image: url(../img/img1.jpg);
+                }
+
+                #hover_bar > ul > #web_publishing > a#web_p2{
+                    background-image: url(../img/img2.jpg);
+                }
+                
+                #hover_bar > ul > #web_publishing > a#web_p3{
+                    background-image: url(../img/img3.jpg);
+                }
+
+                #hover_bar > ul > #web_publishing > a#web_p4{
+                    background-image: url(../img/img4.jpg);
+                }
+
+                #hover_bar > ul > #stage_design > a#stage_p1{
+                    background-image: url(../img/img5.jpg);
+                }
+                #hover_bar > ul > #stage_design > a#stage_p2{
+                    background-image: url(../img/img6.jpg);
+                }
+                #hover_bar > ul > #stage_design > a#stage_p3{
+                    background-image: url(../img/img7.jpg);
+                }
+                #hover_bar > ul > #stage_design > a#stage_p4{
+                    background-image: url(../img/img8.jpg);
+                }
+
+            #hover_bar > ul > button{
+                width: 16px; height: 16px;
+                position: absolute;
+                top: 18%;
+                cursor: pointer;
+                z-index: 100;
+            }
+
+            #hover_bar > ul > button.btn_next{
+                left: 25%;
+                background: url(../images/btn_next.png);
+                margin-left: 85px;
+                animation: btn_next 0.7s linear 0s infinite alternate;
+            }
+
+            #hover_bar > ul > button.btn_prev{
+                left: 75%;
+                margin-left: -60px;
+                background: url(../images/btn_prev.png);
+                animation: btn_prev 0.7s linear 0s infinite alternate;
+            }
+
+            @keyframes btn_next{
+                form{margin-left: 85px;}
+                to{margin-left: 95px;   opacity: 0;}
+            }
+            
+            @keyframes btn_prev{
+                form{margin-left: -60px;}
+                to{margin-left: -70px;   opacity: 0;}
+            }

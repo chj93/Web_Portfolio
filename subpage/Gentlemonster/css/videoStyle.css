@@ -1,0 +1,110 @@
+/* videoStyle.css */
+
+.video{
+    width:100%;
+}
+
+    .video > article{
+        width:100%;height: auto;
+        position: relative;
+    }
+
+        .video > article > div{
+            width: 100%;    
+        }
+
+        .video > article > ul{
+            width: 100%;
+            position: absolute;
+            left: 0; top: 50%;
+            margin-top: -43px;
+        }
+
+        @media screen and (max-width: 1366px){
+        .video > article > ul{
+            margin-top: -35px;
+        }
+        }
+            .video > article > ul > li {
+                text-align: center;
+                color: #fff;
+            }
+
+            .video > article > ul > li#video_more {       
+                position: absolute;
+                left: 50%; top: 100px;
+                margin-left: -122px;
+            }
+
+            @media screen and (max-width: 1366px){
+            .video > article > ul > li#video_more{
+                margin-left: -92px;
+                top: 70px;
+            }
+            }
+
+            @media screen and (max-width: 767px){
+            .video > article > ul > li#video_more{
+                margin-left: -43px;
+                top: 75px;
+            }    
+            }
+
+            .video > article > ul > li#video_title > h4{
+                font-size: 18px;
+            }
+
+            .video > article > ul > li#video_title > h3{
+                font-size: 24px;
+                line-height: 45px;
+                font-weight: bold;
+            }
+
+            .video > article > ul > li#video_title > h5{
+                font-size: 18px;
+            }
+
+            @media screen and (max-width: 1366px){
+            .video > article > ul > li#video_title > h4{
+                font-size: 14px;
+            }
+            .video > article > ul > li#video_title > h3{
+                font-size: 20px;
+                line-height: 30px;
+            }
+            .video > article > ul > li#video_title > h5{
+                font-size: 14px;
+            }    
+            }
+
+            .video > article > ul > li > a{
+                float: left;
+                width: 110px; height: 35px;
+                line-height: 35px;
+                font-size: 14px;
+                margin-right: 10px;
+                background: #000;
+                color:#fff;
+                border: 1px solid #fff;
+            }
+
+            @media screen and (max-width: 1366px){
+            .video > article > ul > li > a{
+                width: 85px; height: 30px;
+                line-height: 30px;
+                font-size: 12px;
+            }    
+            }
+            
+            @media screen and (max-width: 767px){
+            .video > article > ul > li > a:first-of-type{
+                display: none;
+
+            }
+            }
+
+            .video > article > ul > li > a:hover{
+                background: #fff;
+                color:#000;
+                transition-duration: 0.3s;
+            }

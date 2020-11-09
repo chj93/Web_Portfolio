@@ -1,0 +1,154 @@
+/* contactStyle.css */
+
+    #contact{
+        width: 68%; height: 100%;
+        margin-left: 16%;
+        background: url(../images/bg.jpg) repeat-y;
+        background-position: center;
+    }
+
+    @media screen and (max-width: 1367px){
+    #contact{
+        background: none;
+    }
+    }
+    
+
+        #direct{
+            width: 50%;
+            float:left;
+            padding: 70px;
+            box-sizing: border-box;
+        }
+
+        @media screen and (max-width: 1367px){
+        #direct{
+            width: 100%;
+            padding: 0;
+            padding-top: 70px;
+            background: url(../images/bg.jpg) repeat-y;
+            background-position: center;
+        }
+        }
+
+            #hgroup{
+                width:100%;
+                margin-bottom: 50px;
+                font-family: 'NotoSerifKR';
+            }
+
+                #hgroup > h2{
+                    text-align: center;
+                    line-height: 40px;
+                }
+
+                    #hgroup > h2 > a{
+                        display: inline;
+                    }
+
+
+
+
+                #hgroup > span{
+                    width: 50px;    height:4px;
+                    background: #ec6941;
+                    display: block;
+                    margin: 30px auto;
+                }
+
+            #title{
+                width:30%;
+                float:left;
+                line-height: 50px;
+            }
+
+            #information{
+                
+                width: 70%;
+                float:right;
+                text-align: right;
+                line-height: 50px;
+            }
+
+
+            
+        #sand_form{
+            width: 50%; height: 100%;
+            float:right;
+            padding: 70px;
+            box-sizing: border-box;
+        }
+
+        @media screen and (max-width: 1367px){
+        #sand_form{
+            width: 100%;
+            padding: 0;
+            padding-top: 30px;
+        }    
+        }
+
+            #sand_form > form{
+                width:100%;height: 100%;
+            }
+
+                #sand_form > form > fieldset{
+                    width:100%;height: 100%;
+                }
+
+                #sand_form > form > fieldset > div{
+                    width:100%; height: 70px;
+                    margin-bottom: 20px;
+                }
+                #sand_form > form > fieldset > div#message{
+                    height: 190px;
+                }
+
+                    #sand_form > form > fieldset > div > label{
+                        width:100%; height: 40px;
+                        line-height: 40px;
+                        font-family: 'NotoSerifKR';
+                        /*color:#5e5f5f;*/
+                        text-transform: uppercase;
+                        /*font-size: 13px;*/
+                        float: left;
+
+                    }
+
+
+
+                    #sand_form > form > fieldset > div > input{
+                        border-bottom: 1px solid #ccc;
+                        width:95%; height:30px;
+                        float:right;
+                        box-sizing: border-box;
+                        
+                    }
+
+                    #sand_form > form > fieldset > div#message > input{
+                        height: 150px;
+                        border:  1px solid #ccc;
+                        box-sizing: border-box;
+
+                    }
+
+                #sand_form > form > fieldset > button{
+                    cursor: pointer;
+                    background: #fff;
+                    color: #ec6941;
+                    border: 2px solid #ec6941;
+                    border-radius: 25px;
+                    transition-duration: 0.3s;
+                    width:200px;
+                    height:50px;
+                    line-height: 30px;
+                    text-align: center;
+                    margin: 0 auto;
+                    display:block;
+                    margin-top:40px;
+                    font-family: 'NotoSerifKR';
+                }
+
+                #sand_form > form > fieldset > button:hover{
+                    background: #ec6941;
+                    color: #fff;
+                }

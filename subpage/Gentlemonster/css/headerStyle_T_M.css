@@ -1,0 +1,335 @@
+/* headerStyle_T_M.css */
+
+#main_header{
+    width: 100%; height: 56px;
+    border-top: 16px solid #000;
+    background: rgba(255,255,255,0.5);
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 100;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1366px){
+#main_header{
+    height: 68px;
+    border-top: 24px solid #000;
+}      
+}
+
+/*******        LOGO          ********/
+
+#logo{
+    width: 160px; height: 14px;
+    position: absolute;
+    left: 39px; top: 13px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1366px){
+#logo{
+    top: 15px;
+}
+}
+
+    #logo > a{
+    width: 100%; height: 100%;
+    background: url(../images/logo.png) no-repeat;
+    background-size: 100%;
+    text-indent: -6000px;
+    }
+
+    /**************  메인메뉴   **************/
+
+    label.toggle_menu{
+        position: absolute;
+        width: 23px; height: 20px;
+        background: url(../images/icon_menu.png);
+        left: 8px; top:50%;
+        margin-top: -10px;
+        text-indent: -6000px;
+        overflow: hidden;
+        z-index: 210;
+    }
+
+
+
+    /** 토글메뉴 활성화 **/
+    input#toggle_menu + #wrap #main_nav{
+        position:fixed;
+        left:0; top: 0; right: 0; bottom: 0;
+        width: 0;
+        overflow: hidden;
+        transition-duration:0.3s;
+        padding-top: 56px;
+        z-index: 200;
+    }
+    
+    @media screen and (min-width: 768px) and (max-width: 1366px){
+    input#toggle_menu + #wrap #main_nav{
+        padding-top: 68px;
+    }
+    }
+
+    input#toggle_menu:checked + #wrap #main_nav{
+        width: 100%;
+    }
+    input#toggle_menu:checked + #main_header{
+        background-color: #fff;
+    }
+
+	#main_nav::before{
+		content: "";
+		display:block;
+		width: 100%;
+		background: rgba(0,0,0,0.5);
+		position: absolute;
+		left: 0; top: 56px; bottom:0;
+    }
+    
+    @media screen and (min-width: 768px) and (max-width: 1366px){
+    #main_nav::before{
+    top: 68px;
+    }
+    }    
+
+        #main_nav > div{
+            width: 87%;
+            background: #fff;
+            position: absolute;
+            left: 0; top: 56px; bottom: 0;
+            overflow:auto;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1366px){
+        #main_nav > div{
+        top: 68px;
+        }
+        } 
+
+            #main_nav > div > ul{
+                font-size: 18px;
+                width: 100%;
+            }
+                #main_nav > div > ul > li{
+
+                }
+
+                #main_nav > div > ul#m_member > li{
+                    float: left;
+                    width: 50%;
+                    padding: 28px 0;
+                }
+                    
+                    #main_nav > div > ul#m_member > li > a{
+                        text-align: center;
+                    }
+                    #main_nav > div > ul > li > a{}
+                    #main_nav > div > ul > li > h3{
+                        font-size: 38px;
+                        line-height: 76px;
+                        font-weight: bold;
+                        font-family: Nanum Gothic_bold;
+                        margin-left: 20px;
+                    }
+
+
+                    #main_nav > div > ul > li#lang_m > h3{
+                        font-size: 18px;
+                        margin-left: 20px;
+                        padding: 30px 0 12px 27px;
+                        font-weight: bold;
+                        background: url(../images/icon_lang.png) no-repeat;
+                        background-position: 0 30px;
+                        line-height: 20px;
+                    }
+
+                    #main_nav > div > ul > li > ul{
+                        display:none;
+                    }
+
+                    #main_nav > div > ul > li.active > ul{
+                        display:block;
+                    }
+
+                        #main_nav > div > ul > li > ul > li{
+                            margin-left: 20px;
+                            line-height: 40px;
+                        }
+
+                        #main_nav > div > ul > li#lang_m > ul > li{
+                            margin-left: 48px;
+                        }
+
+                            #main_nav > div > ul > li > ul > li > a{text-transform: capitalize;}
+
+                            #main_nav > div > ul > li#lang_m > ul > li > a{
+                                width: 40%;
+                                font-size: 15px;
+                                line-height: 29px;
+                            }
+
+
+
+    /**************  검색   **************/
+    #top_nav{
+        position: absolute;
+        width: 40px; height: 40px;
+        right: 40px; top: 0;
+        z-index: 220;
+    }
+
+        #top_nav > ul{
+            width: 100%; height: 100%;
+            position: absolute;
+        }
+
+            #search_warp{
+                position: absolute;
+                width: 100%; height: 100%;
+                z-index: 110;
+            }
+
+                #search_warp > label.search{
+                    position: absolute;
+                    width: 100%; height: 100%;
+                    background: url(../images/icon_search.png) no-repeat;
+                    background-position: 10px 10px;
+                    text-indent: -6000px;
+                    overflow: hidden;
+                }
+
+                input#search ~ #search_textfield{
+                    position: fixed;
+                    right: 80px; top:16px;
+                    bottom:0;
+                    width: 0; height: 40px;
+                    overflow: hidden;
+                    transition-duration: 0.3s;
+                    background: #fff;
+                }
+
+                @media screen and (min-width: 768px) and (max-width: 1366px){
+                input#search ~  #search_textfield{
+                    top:24px;
+                    height: 44px;
+                }
+                }
+
+                input#search:checked ~  #search_textfield{
+                    width: 85%;
+                }
+
+                @media screen and (min-width: 768px) and (max-width: 1366px){
+                input#search:checked ~  #search_textfield{
+                    width: 280px;
+                }    
+                }
+
+                /** 오류 : 검색아이콘 클릭시 아이콘 닫기버튼으로 바뀌도록 **/
+                input#search:checked + label.search{
+                    background-image: url(../images/icon_close_20x20.png);
+                    transition-delay: 0.3s;
+                    transition-duration: 0.2s;
+                }
+
+                #search_warp > div > form{
+                    overflow:hidden;
+                    width:100%; height: 100%;
+                    position: absolute;
+                }
+
+                    #search_warp >div > form > fieldset{
+                        width:100%; height: 100%;
+                        position: absolute;
+                    }
+
+                    #search_warp >div > form > fieldset > input{
+                        width: 80%;   height: 80%;
+                        background: none;
+                        border-bottom: 1px solid #000;
+                        color:#000;
+                        text-align:center;
+                        box-sizing: border-box;
+                        position: absolute;
+                        right:30px; top: 10%;
+                    }    
+                    @media screen and (min-width: 768px) and (max-width: 1366px){
+                    #search_warp >div > form > fieldset > input{
+                        width: 245px;
+                    }   
+                    }
+
+                    
+                    #search_warp >div > form > fieldset > button{
+                        width: 20px; height: 20px;
+                        background: url(../images/icon_search.png);
+                        text-indent: -8000px;
+                        overflow:hidden;
+                        position: absolute;
+                        right: 5px; top: 10px;
+                    }
+
+
+
+    /**************  장바구니   **************/
+    #cart_mobile{
+        position: absolute;
+        width: 40px; height: 40px;
+        right: 0; top: 0;
+        z-index: 120;
+    }
+        label.cart_mobile{
+            width: 20px; height: 20px;
+            position: absolute;
+            top: 10px; left: 10px;
+            background: url(../images/icon_cart.png);
+            text-indent: -6000px;
+            overflow: hidden;
+        }
+
+        input#cart_m + #cart_m_check{
+            position: fixed;
+            width: 50%; height: 0;
+            background: #fff;
+            right: 0; top: 56px;
+            overflow: hidden;
+            transition-duration: 0.2s;
+        }
+
+        input#cart_m:checked + #cart_m_check{
+            height: 100px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1366px){
+        input#cart_m + #cart_m_check{
+            top: 68px;
+            width: 250px;
+        }
+        input#cart_m:checked + #cart_m_check{
+            
+        }
+        }        
+
+            #cart_m_check > ul{
+                width: 90%; height: 100%;
+                margin: 0 auto;
+                
+            }
+            
+                #cart_m_check > ul > li{
+                    width: 100%;
+                    text-align: center;
+                }
+
+                #cart_m_check > ul > li:first-child{
+                    padding: 30px 0;
+                }
+
+                    #cart_m_check > ul > li > a{
+                        width: 100%; height: 23px;
+                        line-height: 23px;
+                        background: #000;
+                        color: #fff;
+                   }
+            
+
+
